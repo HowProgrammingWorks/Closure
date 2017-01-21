@@ -1,10 +1,10 @@
 'use strict';
 
 function hash() {
-  let data = {};
+  const data = {};
   Object.defineProperty(data, 'add', {
     enumerable: false,
-    value: function(key, value) {
+    value(key, value) {
       data[key] = value;
       return data;
     }
@@ -14,7 +14,7 @@ function hash() {
 
 console.dir(
   hash()
-  .add('name', 'Marcus')
-  .add('city', 'Roma')
-  .add('born', 121)
+    .add('name', 'Marcus')
+    .add('city', 'Roma')
+    .add('born', 121)
 );

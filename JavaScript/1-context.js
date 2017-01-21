@@ -1,7 +1,7 @@
 'use strict';
 
 function hash() {
-  let data = {};
+  const data = {};
   let counter = 0;
   return function(key, value) {
     data[key] = value;
@@ -11,8 +11,8 @@ function hash() {
   };
 }
 
-let h1 = hash();
+const h1 = hash();
 h1('name', 'Marcus');
 h1('city', 'Roma');
-let obj1 = h1('born', 121);
+const obj1 = h1('born', 121);
 console.dir({ obj1 });
