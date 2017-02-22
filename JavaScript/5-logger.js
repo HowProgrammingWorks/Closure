@@ -17,7 +17,9 @@ logger.colors = {
 const warning = logger('warning');
 const error = logger('error');
 const debug = logger('debug');
+const slow = logger('slow');
 
+slow('I am slow logger');
 warning('Hello');
 error('World');
 debug('Bye!');

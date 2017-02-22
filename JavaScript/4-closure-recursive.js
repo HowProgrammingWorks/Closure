@@ -8,6 +8,8 @@ function add(x) {
   };
 }
 
+// const add = x => y => add(x + y);
+
 const a1 = add(5);
 const a2 = a1(2);
 const a3 = a2(3);
