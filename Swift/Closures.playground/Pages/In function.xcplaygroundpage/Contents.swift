@@ -1,3 +1,5 @@
+//: [Simple closure](@previous)
+
 func repeatFunc(num: Int, f: () -> ()) {
     for _ in 1...num {
         f()
@@ -6,7 +8,8 @@ func repeatFunc(num: Int, f: () -> ()) {
 
 repeatFunc(num: 5) {
     print("Hello world")
-}  //  prints "Hello world" 5 times
+} 
+
 
 
 let myArray = [0,1,2,3,4]
@@ -21,4 +24,8 @@ func through(array arr: [Int], f: (Int) -> (Int)) -> [Int] {
 
 through(array: myArray) {
     $0 + $0
-}   // [0,2,4,6,8]
+}
+
+//: [Escaping closure](@next)
+
+
