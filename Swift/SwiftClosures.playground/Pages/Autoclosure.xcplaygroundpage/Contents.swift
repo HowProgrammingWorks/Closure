@@ -14,7 +14,3 @@ func testFunc(isEnabled: Bool, closure: @autoclosure () -> Test) {
 
 testFunc(isEnabled: true, closure: Test())
 testFunc(isEnabled: false, closure: Test())
-
-/*: ###
- Important: autoclosure doesn't take arguments because there's no way to pass them
- */
