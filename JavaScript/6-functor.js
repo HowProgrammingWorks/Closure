@@ -7,7 +7,7 @@ function add(x) {
     return add(z);
   };
   f.map = function(fn) {
-    fn(x);
+    return fn(x);
   };
   return f;
 }

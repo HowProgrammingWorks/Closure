@@ -16,6 +16,4 @@ const a3 = a2(3);
 const a4 = a1(1);
 const a5 = a2(10);
 
-console.log('--------');
-
 add(1)(4)(8)(8);
