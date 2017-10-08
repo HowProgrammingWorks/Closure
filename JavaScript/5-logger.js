@@ -1,12 +1,12 @@
 'use strict';
 
-function logger(level) {
+const logger = level => {
   const color = logger.colors[level] || logger.colors.info;
-  return function(s) {
+  return s => {
     const date = new Date().toISOString();
     console.log(color + date + '\t' + s);
   };
-}
+};
 
 logger.colors = {
   warning: '\x1b[1;33m',

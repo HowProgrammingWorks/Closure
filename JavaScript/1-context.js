@@ -1,15 +1,15 @@
 'use strict';
 
-function hash() {
+const hash = () => {
   const data = {};
   let counter = 0;
-  return function(key, value) {
+  return (key, value) => {
     data[key] = value;
     counter++;
     console.dir({ counter });
     return data;
   };
-}
+};
 
 const h1 = hash();
 h1('name', 'Marcus');

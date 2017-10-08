@@ -1,6 +1,6 @@
 'use strict';
 
-function hash() {
+const hash = () => {
   const data = {};
   Object.defineProperty(data, 'add', {
     enumerable: false,
@@ -10,7 +10,7 @@ function hash() {
     }
   });
   return data;
-}
+};
 
 console.dir(
   hash()

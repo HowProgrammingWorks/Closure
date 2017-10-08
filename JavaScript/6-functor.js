@@ -1,14 +1,12 @@
 'use strict';
 
-function add(x) {
-  const f = function(y) {
+const add = x => {
+  const f = y => {
     const z = x + y;
     console.log(x + '+' + y + '=' + z);
     return add(z);
   };
-  f.map = function(fn) {
-    return fn(x);
-  };
+  f.map = fn => fn(x);
   return f;
 }
 
