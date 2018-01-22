@@ -8,11 +8,13 @@ const add = x => {
   };
   f.map = fn => fn(x);
   return f;
-}
+};
 
 const a1 = add(5);
 const a2 = a1(2);
 const a3 = a2(3);
 const a4 = a1(1);
 const a5 = a2(10);
-a5.map(console.log);
+
+const print = x => console.log(x);
+[a3, a4, a5].map(x => typeof(x)).map(print);
