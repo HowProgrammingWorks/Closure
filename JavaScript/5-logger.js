@@ -14,6 +14,8 @@ logger.colors = {
   info: '\x1b[1;37m'
 };
 
+// Usage
+
 const warning = logger('warning');
 const error = logger('error');
 const debug = logger('debug');

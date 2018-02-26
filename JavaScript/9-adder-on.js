@@ -19,9 +19,11 @@ const adder = (a) => {
   return Object.assign(obj, { add, value, on });
 };
 
+// Usage
+
 const a = adder(3)
-  .add(-9)
   .on('zero', () => console.log('Less than zero'))
+  .add(-9)
   .add(12)
   .add(5)
   .value();

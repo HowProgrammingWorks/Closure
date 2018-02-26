@@ -12,5 +12,7 @@ const adder = (a) => {
   return obj;
 };
 
+// Usage
+
 const v = adder(3).add(-9).add(12).value();
 console.log(v);

@@ -6,5 +6,7 @@ const adder = (a) => {
   return { add, value };
 };
 
+// Usage
+
 const v = adder(3).add(-9).add(12).value();
 console.log(v);

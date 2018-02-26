@@ -8,6 +8,7 @@ const add = x => y => {
 
 // const add = x => y => x + y;
 
-const res = add(3)(6);
+// Usage
 
+const res = add(3)(6);
 console.log(res);

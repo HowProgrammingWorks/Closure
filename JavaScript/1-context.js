@@ -11,6 +11,8 @@ const hash = () => {
   };
 };
 
+// Usage
+
 const h1 = hash();
 h1('name', 'Marcus');
 h1('city', 'Roma');

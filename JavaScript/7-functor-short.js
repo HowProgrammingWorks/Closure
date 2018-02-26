@@ -6,4 +6,6 @@ const add = x => {
   return f;
 };
 
+// Usage
+
 add(2)(7)(1).map(console.log);

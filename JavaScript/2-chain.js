@@ -12,6 +12,8 @@ const hash = () => {
   return data;
 };
 
+// Usage
+
 console.dir(
   hash()
     .add('name', 'Marcus')
