@@ -2,7 +2,7 @@
 
 const adder = (a) => {
   const value = () => a;
-  const add = (b) => adder(a + b);
+  const add = b => adder(a + b);
   return { add, value };
 };
 
