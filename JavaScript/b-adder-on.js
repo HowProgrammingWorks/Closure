@@ -1,10 +1,10 @@
 'use strict';
 
-const adder = (a) => {
+const adder = a => {
   let onZerro = null;
   const obj = {};
   const value = () => a;
-  const add = (b) => {
+  const add = b => {
     let x = a + b;
     if (x < 0) {
       x = 0;
