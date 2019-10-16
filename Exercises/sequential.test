@@ -1,0 +1,56 @@
+({
+  name: 'seq',
+  length: [10, 100],
+  test: seq => {
+    {
+      const f1 = x => x + 7;
+      const f2 = x => x * 2;
+      const f = seq(f1)(f2);
+      const x = 0;
+      const y = f(x);
+      const expected = 7;
+      if (y !== expected) {
+        const msg = `seq(${f1})(${f2})(${x})`;
+        throw new Error(`${msg} === ${y} expected: ${expected}`);
+      }
+    }
+    {
+      const f1 = x => x + 7;
+      const f2 = x => x * 2;
+      const f = seq(f1)(f2);
+      const x = 5;
+      const y = f(x);
+      const expected = 17;
+      if (y !== expected) {
+        const msg = `seq(${f1})(${f2})(${x})`;
+        throw new Error(`${msg} === ${y} expected: ${expected}`);
+      }
+    }
+    {
+      const f1 = x => x * 2;
+      const f2 = x => x + 7;
+      const f = seq(f1)(f2);
+      const x = 5;
+      const y = f(x);
+      const expected = 24;
+      if (y !== expected) {
+        const msg = `seq(${f1})(${f2})(${x})`;
+        throw new Error(`${msg} === ${y} expected: ${expected}`);
+      }
+    }
+    {
+      const f1 = x => x + 1;
+      const f2 = x => x * 2;
+      const f3 = x => x / 3;
+      const f4 = x => x - 4;
+      const f = seq(f1)(f2)(f3)(f4);
+      const x = 7;
+      const y = f(x);
+      const expected = 3;
+      if (y !== expected) {
+        const msg = `seq(${f1})(${f2})(${f3})(${f4})(${x})`;
+        throw new Error(`${msg} === ${y} expected: ${expected}`);
+      }
+    }
+  }
+})
