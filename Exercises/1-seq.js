@@ -1,5 +1,7 @@
 'use strict';
 
-const seq = f => g => x => ((!isNaN(x)) ? f(g(x)) : seq(i => f(g(i)))(x));
+const seq = (...f) => a => (!isNaN(a) ?
+  f.reduce((v, fn) => fn(v), a) :
+  seq(a, ...f));
 
 module.exports = { seq };
