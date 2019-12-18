@@ -9,7 +9,7 @@ const array = () => {
   func.pop = () => {
     const elem = arr.pop();
     return elem;
-  }
+  };
   return func;
 };
 
