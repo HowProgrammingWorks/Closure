@@ -1,0 +1,38 @@
+({
+  name: 'array',
+  length: [100, 200],
+  test: array => {
+    {
+      const arr = array();
+      arr.push('first');
+      arr.push('second');
+      arr.push('third');
+      if (arr(0) !== 'first') {
+        throw new Error(`arr(0) === ${arr(0)} expected: 'first'`);
+      }
+      if (arr(1) !== 'second') {
+        throw new Error(`arr(1) === ${arr(1)} expected: 'second'`);
+      }
+      if (arr(2) !== 'third') {
+        throw new Error(`arr(2) === ${arr(2)} expected: 'third'`);
+      }
+      const value = arr.pop();
+      if (value !== 'third') {
+        throw new Error(`arr.pop() === ${value} expected: 'third'`);
+      }
+    }
+    {
+      const arr = array();
+      if (typeof arr(0) !== 'undefined') {
+        throw new Error(`arr(0) === ${arr(0)} expected: undefined`);
+      }
+    }
+    {
+      const arr = array();
+      const value = arr.pop();
+      if (typeof value !== 'undefined') {
+        throw new Error(`arr.pop() === ${value} expected: undefined`);
+      }
+    }
+  }
+})
