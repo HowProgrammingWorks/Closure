@@ -1,6 +1,6 @@
 ({
   name: 'array',
-  length: [100, 200],
+  length: [80, 200],
   test: array => {
     {
       const arr = array();
