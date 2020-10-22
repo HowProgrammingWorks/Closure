@@ -1,5 +1,5 @@
 'use strict';
 
-const seq = f => g => x => 0;
+const seq = a => b => (isNaN(b) ? seq(c => a(b(c))) : a(b));
 
 module.exports = { seq };
