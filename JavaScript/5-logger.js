@@ -1,8 +1,8 @@
 'use strict';
 
-const logger = kind => {
+const logger = (kind) => {
   const color = logger.colors[kind] || logger.colors.info;
-  return s => {
+  return (s) => {
     const date = new Date().toISOString();
     console.log(color + date + '\t' + s);
   };

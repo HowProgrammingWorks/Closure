@@ -1,6 +1,6 @@
 'use strict';
 
-const adder = a => ({ value: () => a, add: b => adder(a + b) });
+const adder = (a) => ({ value: () => a, add: (b) => adder(a + b) });
 
 // Usage
 

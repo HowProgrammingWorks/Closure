@@ -1,6 +1,6 @@
 'use strict';
 
-const adder = a => ({
+const adder = (a) => ({
   value() {
     return a;
   },
