@@ -27,4 +27,5 @@ const a = adder(3)
   .add(12)
   .add(5)
   .value();
+
 console.log(a);
