@@ -17,5 +17,5 @@ const a4 = a1(1);
 const a5 = a2(10);
 console.log(a1, a2, a3, a4, a5);
 
-const res = add(1)(4)(8)(8);
+const res = add(5)(2)(3)(7);
 console.log(res);
