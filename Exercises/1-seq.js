@@ -1,5 +1,8 @@
 'use strict';
 
-const seq = (f) => (g) => (x) => 0;
+
+const seq = (f) => (g) => (
+  typeof g === 'function' ? seq((x) => f(g(x))) : f(g)
+);
 
 module.exports = { seq };
