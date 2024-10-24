@@ -8,4 +8,6 @@ const add = (x) => {
 
 // Usage
 
-add(2)(7)(1).map(console.log);
+add(2)(7)(1).map((x) => {
+  console.log({ x });
+});

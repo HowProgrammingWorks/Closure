@@ -3,7 +3,7 @@
 const add = (x) => {
   const f = (y) => {
     const z = x + y;
-    console.log(x + '+' + y + '=' + z);
+    console.log(`${x} + ${y} = ${z}`);
     return add(z);
   };
   f.map = (fn) => fn(x);

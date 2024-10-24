@@ -21,11 +21,11 @@ const adder = (a) => {
 
 // Usage
 
-const a = adder(3)
+const res = adder(3)
   .on('zero', () => console.log('Less than zero'))
   .add(-9)
   .add(12)
   .add(5)
   .value();
 
-console.log(a);
+console.log({ res });

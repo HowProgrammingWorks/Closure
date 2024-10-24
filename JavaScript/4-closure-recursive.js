@@ -1,9 +1,12 @@
 'use strict';
 
-const add = (x) => (y) => {
-  const z = x + y;
-  console.log(`${x} + ${y} = ${z}`);
-  return add(z);
+const add = (x) => {
+  const internalAdd = (y) => {
+    const z = x + y;
+    console.log(`${x} + ${y} = ${z}`);
+    return add(z);
+  };
+  return internalAdd;
 };
 
 // const add = x => y => add(x + y);

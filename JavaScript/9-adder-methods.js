@@ -7,7 +7,7 @@ const adder = (a) => ({
   add(b) {
     a += b;
     return this;
-  }
+  },
 });
 
 // Usage
