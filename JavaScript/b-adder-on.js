@@ -1,19 +1,19 @@
 'use strict';
 
 const adder = (a) => {
-  let onZerro = null;
+  let onZero = null;
   const obj = {};
   const value = () => a;
   const add = (b) => {
-    let x = a + b;
-    if (x < 0) {
-      x = 0;
-      if (onZerro) onZerro();
+    let sum = a + b;
+    if (sum < 0) {
+      sum = 0;
+      if (onZero) onZero();
     }
-    return adder(x);
+    return adder(sum);
   };
   const on = (name, callback) => {
-    if (name === 'zero') onZerro = callback;
+    if (name === 'zero') onZero = callback;
     return obj;
   };
   return Object.assign(obj, { add, value, on });

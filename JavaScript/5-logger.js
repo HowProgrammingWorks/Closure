@@ -4,7 +4,7 @@ const logger = (kind) => {
   const color = logger.colors[kind] || logger.colors.info;
   return (s) => {
     const date = new Date().toISOString();
-    console.log(color + date + '\t' + s);
+    console.log(`${color}${date}\t${s}`);
   };
 };
 
