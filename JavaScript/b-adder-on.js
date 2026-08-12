@@ -8,7 +8,7 @@ const adder = (a) => {
     let sum = a + b;
     if (sum < 0) {
       sum = 0;
-      if (onZero) onZero();
+      onZero?.();
     }
     return adder(sum);
   };
